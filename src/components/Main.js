@@ -204,6 +204,20 @@ const Main = () => {
             ]
         }
     ];
+
+    const textContainer = [
+        {
+            start: 'self',
+            end: '.last-container',
+            properties: [
+                {
+                    startValue: -90,
+                    endValue: 0,
+                    property: 'rotate'
+                },
+            ]
+        }
+    ];
     return (
         <>
         <Container sx={{backgroundColor: 'lightgray', width: '100%', maxWidth: '100%!important'}}>
@@ -270,35 +284,37 @@ const Main = () => {
                     </Box>
                 </Plx>
             </Container>
-            <Container className="fourth-container" sx={
-                {
-                    display: 'flex', 
-                    gap: '20px' ,
-                    flexDirection: 'column' ,
-                    width: '100%', 
-                    padding: '5%',
-                    border: '1px solid black',
-                    borderRadius: '30px',
-                    }
-                }>
-                <Plx parallaxData={aboutMe} className='aboutme-text'>
-                    <Typography variant='h3' align='center'>
-                        About Me
-                    </Typography>
-                </Plx>
-                <Plx parallaxData={greetings} className='greetings-text'>
-                    <Typography variant='h4' align='center'>
-                        My name is Dandrev Nasi, it's nice meeting you. 
-                    </Typography>   
-                </Plx>
-                <Plx parallaxData={maincontent} className='main-content'>
-                    <Typography variant='h5' align='justify'>
-                        I'm currently a WordPress Developer, developing and maintaining responsive WordPress websites for various brands. I also manage WooCommerce
-                        for product management and sales tracking. I have been using Google Analytics together with Google Tag Manager in website activity tracking 
-                        and management. Continuous growth is my main thing so I'm more into upskilling.
-                    </Typography>
-                </Plx>
-            </Container> 
+            <Plx parallaxData={textContainer}>
+                <Container className="fourth-container" sx={
+                    {
+                        display: 'flex', 
+                        gap: '20px' ,
+                        flexDirection: 'column' ,
+                        width: '100%', 
+                        padding: '5%',
+                        border: '1px solid black',
+                        borderRadius: '30px',
+                        }
+                    }>
+                    <Plx parallaxData={aboutMe} className='aboutme-text'>
+                        <Typography variant='h3' align='center'>
+                            About Me
+                        </Typography>
+                    </Plx>
+                    <Plx parallaxData={greetings} className='greetings-text'>
+                        <Typography variant='h4' align='center'>
+                            My name is Dandrev Nasi, it's nice meeting you. 
+                        </Typography>   
+                    </Plx>
+                    <Plx parallaxData={maincontent} className='main-content'>
+                        <Typography variant='h5' align='justify'>
+                            I'm currently a WordPress Developer, developing and maintaining responsive WordPress websites for various brands. I also manage WooCommerce
+                            for product management and sales tracking. I have been using Google Analytics together with Google Tag Manager in website activity tracking 
+                            and management. Continuous growth is my main thing so I'm more into upskilling.
+                        </Typography>
+                    </Plx>
+                </Container> 
+            </Plx>
             <Container className='last-container' sx={{display: 'flex', width: '100%', maxWidth: '100%!important', padding: '20%'}}>
             </Container>  
         </Container>
