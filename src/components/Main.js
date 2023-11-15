@@ -19,7 +19,8 @@ import {
     TimelineConnector, 
     TimelineContent,
     TimelineOppositeContent, 
-    TimelineDot
+    TimelineDot,
+    timelineItemClasses
 } from "@mui/lab";
 import htmlLogo from '../imgs/html5.png';
 import wpLogo from '../imgs/wpLogo.png';
@@ -308,12 +309,12 @@ const Main = () => {
                     </Grid>
                 </Plx>
             </Grid>
-            <Grid container className='last-container' sx={{display: 'flex', width: '100%', maxWidth: '100%!important', padding: '20%'}}>
-                <Timeline position="alternate">
+            <Grid container className='last-container' sx={{display: 'flex', width: '100%', maxWidth: '100%!important', padding: '2%', height: '100vh'}}>
+                <Timeline position="alternate" sx={{height: 'inherit'}}>
                     <TimelineItem>
                         <TimelineOppositeContent>
-                            <Typography variant='h3'>
-                                2022
+                            <Typography variant='h4'>
+                                November 2022-Present
                             </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
@@ -323,17 +324,33 @@ const Main = () => {
                         <TimelineContent>
                             <Plx parallaxData={oppositeContentPlxToRight}>
                                 <Container sx={{border: '1px solid black', padding: '50px'}}>
-                                    Hello
-                                    Hello
-                                    Hello
-                                    Hello
+                                   <Typography variant='h4' align='center'>
+                                        WordPress Developer
+                                   </Typography>
+                                   <Typography variant='h5' align='center' sx={{fontStyle : 'italic'}}>
+                                        Boosterfoods, Inc. 
+                                   </Typography>
+                                   <List sx={{listStyleType: 'disc', pl: 4}}>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Develop and maintain WordPress websites for each company brands.
+                                        </ListItem>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Creating website backups and keeping weekly plugin and theme updates for website maintenance.
+                                        </ListItem>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Utilizing WooCommerce and Google Analytics 4 for eCommerce and website traffic tracking.
+                                        </ListItem>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Server maintenance by weekly server reboot and server disk usage monitoring.
+                                        </ListItem>
+                                   </List>
                                 </Container>
                             </Plx>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent>
-                            <Typography variant='h3'>
+                            <Typography variant='h4'>
                                 2016
                             </Typography>
                         </TimelineOppositeContent>
@@ -344,10 +361,26 @@ const Main = () => {
                         <TimelineContent>
                             <Plx parallaxData={oppositeContentPlxToLeft}>
                                 <Container sx={{border: '1px solid black', padding: '50px'}}>
-                                    Hello
-                                    Hello
-                                    Hello
-                                    Hello
+                                <Typography variant='h4' align='center'>
+                                        WordPress Developer
+                                   </Typography>
+                                   <Typography variant='h5' align='center' sx={{fontStyle : 'italic'}}>
+                                        Boosterfoods, Inc. 
+                                   </Typography>
+                                   <List sx={{listStyleType: 'disc', pl: 4}}>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Develop and maintain WordPress websites for each company brands.
+                                        </ListItem>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Creating website backups and keeping weekly plugin and theme updates for website maintenance.
+                                        </ListItem>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Utilizing WooCommerce and Google Analytics 4 for eCommerce and website traffic tracking.
+                                        </ListItem>
+                                        <ListItem sx={{display: 'list-item'}}>
+                                            Server maintenance by weekly server reboot and server disk usage monitoring.
+                                        </ListItem>
+                                   </List>
                                 </Container>
                             </Plx>
                         </TimelineContent>

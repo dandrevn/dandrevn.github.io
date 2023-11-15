@@ -7,21 +7,9 @@ import {
     useMediaQuery, 
     Grid, 
     Slide, 
-    ThemeProvider, 
-    createTheme,
-    responsiveFontSizes
 } from "@mui/material";
 import profilePic from '../imgs/me.jpg';
 
-let theme = createTheme({
-    typography: {
-        fontFamily: [
-          '"Segoe UI Emoji"',
-          '"Segoe UI"',
-          '"Helvetica Neue"'
-        ].join(','),
-    }
-});
 
 // [theme.typography.h1, theme.typography.h2, theme.typography.h3,theme.typography.h4,theme.typography.h5,theme.typography.h6]= {
 //     fontSize: '1.2rem',
@@ -32,8 +20,6 @@ let theme = createTheme({
 //         fontSize: '2.4rem',
 //     },
 //  };
-
-theme = responsiveFontSizes(theme);
 
 const Intro = () => {
     const desktop = useMediaQuery('(min-width: 1025px)');
@@ -96,7 +82,6 @@ const Intro = () => {
     ];
     return (
         <>
-        <ThemeProvider theme={theme}>
             <Grid container sx={{display: 'flex', flexDirection: 'row',justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ width: '50%'}}>
                       <Plx parallaxData={imgPlxData}>
@@ -130,7 +115,6 @@ const Intro = () => {
                         </Plx>
                     </Grid>
             </Grid>
-        </ThemeProvider>
         </>
     );
 };
