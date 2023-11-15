@@ -216,6 +216,20 @@ const Main = () => {
             ]
         }
     ]
+    const timelineTextScalePlx = [
+        {
+            start: 'self',
+            startOffSet: '40vh',
+            duration: 500,
+            properties: [
+                {
+                    startValue: 0.1,
+                    endValue: 1,
+                    property: 'scale'
+                }
+            ]
+        }
+    ]
     return (
         <Container sx={{backgroundColor: '#4682B4', width: '100%', alignItems : 'center', display: 'flex', maxWidth: '100%!important', gap: '2%'}}>
         <Grid container sx={{backgroundColor: '#4682B4', width: '100%', alignItems : 'center', display: 'flex'}}>
@@ -310,7 +324,7 @@ const Main = () => {
                 </Plx>
             </Grid>
             <Grid container className='last-container' sx={{display: 'flex', width: '100%', maxWidth: '100%!important', padding: '2%', height: '100vh'}}>
-                <Timeline position="alternate" sx={{height: 'inherit'}}>
+                <Timeline position="alternate" sx={{height: '100%'}}>
                     <TimelineItem>
                         <TimelineOppositeContent>
                             <Typography variant='h4'>
@@ -323,27 +337,33 @@ const Main = () => {
                         </TimelineSeparator>
                         <TimelineContent>
                             <Plx parallaxData={oppositeContentPlxToRight}>
-                                <Container sx={{border: '1px solid black', padding: '50px'}}>
-                                   <Typography variant='h4' align='center'>
-                                        WordPress Developer
-                                   </Typography>
-                                   <Typography variant='h5' align='center' sx={{fontStyle : 'italic'}}>
-                                        Boosterfoods, Inc. 
-                                   </Typography>
-                                   <List sx={{listStyleType: 'disc', pl: 4}}>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Develop and maintain WordPress websites for each company brands.
-                                        </ListItem>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Creating website backups and keeping weekly plugin and theme updates for website maintenance.
-                                        </ListItem>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Utilizing WooCommerce and Google Analytics 4 for eCommerce and website traffic tracking.
-                                        </ListItem>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Server maintenance by weekly server reboot and server disk usage monitoring.
-                                        </ListItem>
-                                   </List>
+                                <Container sx={{border: '1px solid black', padding: '20px'}}>
+                                     <Plx parallaxData={timelineTextScalePlx}>
+                                        <Typography variant='h4' align='center'>
+                                            WordPress Developer
+                                        </Typography>
+                                    </Plx>
+                                    <Plx parallaxData={timelineTextScalePlx}>
+                                        <Typography variant='h5' align='center' sx={{fontStyle : 'italic'}}>
+                                            Boosterfoods, Inc. 
+                                        </Typography>
+                                    </Plx>
+                                   <Plx parallaxData={timelineTextScalePlx}>
+                                    <List sx={{listStyleType: 'disc', pl: 4}}>
+                                            <ListItem sx={{display: 'list-item'}}>
+                                                Develop and maintain WordPress websites for each company brands.
+                                            </ListItem>
+                                            <ListItem sx={{display: 'list-item'}}>
+                                                Creating website backups and keeping weekly plugin and theme updates for website maintenance.
+                                            </ListItem>
+                                            <ListItem sx={{display: 'list-item'}}>
+                                                Utilizing WooCommerce and Google Analytics 4 for eCommerce and website traffic tracking.
+                                            </ListItem>
+                                            <ListItem sx={{display: 'list-item'}}>
+                                                Server maintenance by weekly server reboot and server disk usage monitoring.
+                                            </ListItem>
+                                    </List>
+                                   </Plx>
                                 </Container>
                             </Plx>
                         </TimelineContent>
@@ -360,27 +380,33 @@ const Main = () => {
                         </TimelineSeparator>
                         <TimelineContent>
                             <Plx parallaxData={oppositeContentPlxToLeft}>
-                                <Container sx={{border: '1px solid black', padding: '50px'}}>
-                                <Typography variant='h4' align='center'>
-                                        WordPress Developer
-                                   </Typography>
-                                   <Typography variant='h5' align='center' sx={{fontStyle : 'italic'}}>
-                                        Boosterfoods, Inc. 
-                                   </Typography>
-                                   <List sx={{listStyleType: 'disc', pl: 4}}>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Develop and maintain WordPress websites for each company brands.
-                                        </ListItem>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Creating website backups and keeping weekly plugin and theme updates for website maintenance.
-                                        </ListItem>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Utilizing WooCommerce and Google Analytics 4 for eCommerce and website traffic tracking.
-                                        </ListItem>
-                                        <ListItem sx={{display: 'list-item'}}>
-                                            Server maintenance by weekly server reboot and server disk usage monitoring.
-                                        </ListItem>
-                                   </List>
+                                <Container sx={{border: '1px solid black', padding: '20px'}}>
+                                    <Plx parallaxData={timelineTextScalePlx}>
+                                        <Typography variant='h4' align='center'>
+                                            WordPress Developer
+                                        </Typography>
+                                    </Plx>
+                                    <Plx parallaxData={timelineTextScalePlx}>
+                                        <Typography variant='h5' align='center' sx={{fontStyle : 'italic'}}>
+                                            Boosterfoods, Inc. 
+                                        </Typography>
+                                    </Plx>
+                                   <Plx parallaxData={timelineTextScalePlx}>
+                                        <List sx={{listStyleType: 'disc', pl: 4}}>
+                                                <ListItem sx={{display: 'list-item'}}>
+                                                    Develop and maintain WordPress websites for each company brands.
+                                                </ListItem>
+                                                <ListItem sx={{display: 'list-item'}}>
+                                                    Creating website backups and keeping weekly plugin and theme updates for website maintenance.
+                                                </ListItem>
+                                                <ListItem sx={{display: 'list-item'}}>
+                                                    Utilizing WooCommerce and Google Analytics 4 for eCommerce and website traffic tracking.
+                                                </ListItem>
+                                                <ListItem sx={{display: 'list-item'}}>
+                                                    Server maintenance by weekly server reboot and server disk usage monitoring.
+                                                </ListItem>
+                                        </List>
+                                   </Plx>
                                 </Container>
                             </Plx>
                         </TimelineContent>
